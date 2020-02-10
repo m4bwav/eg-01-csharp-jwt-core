@@ -61,7 +61,7 @@ namespace eg_01_csharp_jwt
         {
             CheckToken();
 
-            EnvelopeDefinition envelope = this.CreateEvelope();
+            EnvelopeDefinition envelope = this.CreateEnvelope();
             EnvelopesApi envelopeApi = new EnvelopesApi(ApiClient.Configuration);
             EnvelopeSummary results = envelopeApi.CreateEnvelope(AccountID, envelope);
             return results;
@@ -70,7 +70,7 @@ namespace eg_01_csharp_jwt
         /// This method creates the envelope request body 
         /// </summary>
         /// <returns></returns>
-        private EnvelopeDefinition CreateEvelope()
+        private EnvelopeDefinition CreateEnvelope()
         {
             EnvelopeDefinition envelopeDefinition = new EnvelopeDefinition
             {
